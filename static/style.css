@@ -1,0 +1,193 @@
+/* static/style.css */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background-color: #add8e6;
+    color: #000;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #e0e0e0;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 0.5rem;
+    border: 1px solid #aaa;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #add8e6;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.obavestenje {
+    background-color: white;
+    border-left: 5px solid #add8e6;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.obavestenje .datum {
+    color: gray;
+    font-size: 0.9em;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #cccccc;
+    color: #333;
+}
+body {
+    font-family: sans-serif;
+    background-color: #f5f9fc;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    color: #0077cc;
+}
+
+.post {
+    background-color: #e0eaf1;
+    border-left: 4px solid #0077cc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+.dodavanje_objave {
+    background-color: lightblue;
+    color: green;
+    border: none;
+    border-radius: 8%;
+    height: 25px;
+    cursor: pointer;
+}
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    background-color: #007BFF;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+header nav a:hover {
+    background-color: #0056b3;
+}
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    background-color: #007BFF;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+header nav a:hover {
+    background-color: #0056b3;
+}
+
+main .post form {
+    margin-top: 10px;
+}
+
+form button {
+    background-color: #d9534f;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #c9302c;
+}
+nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.login-button, a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login-button:hover, a:hover {
+    background-color: #45a049;
+}
+/* Stilizovanje blog postova kao obaveštenja */
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+.post h3 a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.post h3 a:hover {
+    text-decoration: underline;
+}
+
+.post small {
+    color: gray;
+    font-size: 12px;
+}
+
+

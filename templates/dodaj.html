@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dodaj objavu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Dodaj novu objavu</h1>
+<form method="POST">
+  <input type="text" name="naslov" placeholder="Naslov" required><br>
+  <input type="date" name="datum" required><br>
+  <textarea name="sadrzaj" placeholder="Sadržaj objave" required></textarea><br>
+  <button type="submit">Sačuvaj</button>
+</form>
+<a href="/">← Nazad</a>
+</body>
+</html>
