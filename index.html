@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fakultetski Blog</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Obaveštenja Fakulteta</h1>
+  <p>Dnevna dešavanja i obaveštenja</p>
+
+  <nav>
+    {% if 'username' in session %}
+    <a href="{{ url_for('logout') }}">Logout ({{ session['username'] }})</a>
+    {% else %}
+    <a href="{{ url_for('login') }}" class="login-button">Prijavi se</a>
+    {% endif %}
+  </nav>
+</header>
+
+<main>
+  <h2>📢 Obaveštenja</h2>
+
+  {% if 'username' in session %}
+  <h3>Dodaj novu objavu</h3>
+  <form action="/add_post" method="POST">
+    <label for="naslov">Naslov:</label>
+    <input type="text" id="naslov" name="naslov" required><br><br>
+
+    <label for="datum">Datum:</label>
+    <input type="text" id="datum" name="datum" required><br><br>
+
+    <label for="sadrzaj">Sadržaj:</label>
+    <textarea id="sadrzaj" name="sadrzaj" required></textarea><br><br>
+
+    <button type="submit">Dodaj objavu</button>
+  </form>
+  {% endif %}
+
+  <hr>
+
+  <h2>Objave</h2>
+  {% for post in posts %}
+  <div class="post">
+    <h3>{{ post[1] }}</h3>
+    <small>{{ post[2] }}</small>
+    <p>{{ post[3][:150] }}{% if post[3]|length > 150 %}...{% endif %}</p>
+
+
+    {% if 'username' in session and session['username'] == 'Aleksa' %}
+    <form action="{{ url_for('delete_post', post_id=post[0]) }}" method="POST">
+      <button type="submit">Obriši objavu</button>
+    </form>
+    {% endif %}
+  </div>
+  <hr>
+  {% endfor %}
+</main>
+
+<footer>
+  <p>&copy; 2025 Fakultet inženjerskih nauka</p>
+</footer>
+
+</body>
+</html>
